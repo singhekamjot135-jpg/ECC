@@ -18,6 +18,14 @@
       },
       "description": "GitHub operations - PRs, issues, repos"
     },
+    "n8n_mcp": {
+      "type": "http",
+      "url": "http://165.227.202.73:5678/mcp-server/http",
+      "headers": {
+        "Authorization": "${N8N_MCP_AUTHORIZATION}"
+      },
+      "description": "n8n MCP endpoint — set N8N_MCP_AUTHORIZATION='Bearer <token>' in your environment instead of committing a bearer token"
+    },
     "firecrawl": {
       "command": "npx",
       "args": ["-y", "firecrawl-mcp"],
