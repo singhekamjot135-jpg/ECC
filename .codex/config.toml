@@ -53,6 +53,14 @@ startup_timeout_sec = 30
 [mcp_servers.exa]
 url = "https://mcp.exa.ai/mcp"
 
+# n8n MCP endpoint. Keep the bearer token in the launching
+# environment, not in this repo:
+#   export N8N_MCP_AUTHORIZATION="Bearer <token>"
+[mcp_servers.n8n_mcp]
+type = "http"
+url = "http://165.227.202.73:5678/mcp-server/http"
+headers = { Authorization = "${N8N_MCP_AUTHORIZATION}" }
+
 [mcp_servers.memory]
 command = "npx"
 args = ["-y", "@modelcontextprotocol/server-memory"]

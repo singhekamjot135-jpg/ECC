@@ -12,6 +12,13 @@
       "type": "http",
       "url": "https://mcp.exa.ai/mcp"
     },
+    "n8n_mcp": {
+      "type": "http",
+      "url": "http://165.227.202.73:5678/mcp-server/http",
+      "headers": {
+        "Authorization": "${N8N_MCP_AUTHORIZATION}"
+      }
+    },
     "memory": {
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-memory@2026.1.26"]
